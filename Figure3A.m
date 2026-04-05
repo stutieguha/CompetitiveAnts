@@ -398,7 +398,6 @@ for bScalar = 1: length(B_ScalarValues) %Beta Value Changes For Colony 1
                         end
 
                     elseif (ant_position(R,3) == 1) %Check If Ant Is Returner
-                        % count = count + 1;
                         ant_position(R,1:2) = ant_position(R,1:2) + u; %Ant Moves Towards Direction Of Nest If Ant Is Returner
                         dist1 = sqrt(((ant_position(R,1) - nestXPos)^2) + ((ant_position(R,2) - nestYPos)^2)); %Distance Between Ant's Position And Nest
                         if (dist1 < 1) %Ant Becomes A Forager Again
@@ -546,7 +545,7 @@ for bScalar = 1: length(B_ScalarValues) %Beta Value Changes For Colony 1
                     end
                     Prob2 = cumsum(P_move2); %Contains All Probabilities Of Moving In Each Of The 8 Directions
 
-                    %
+                    
                     if(ant1_position(G,3) == 0) %Check If Ant Is Forager
                         G1 = rand;
 
@@ -749,7 +748,7 @@ for bScalar = 1: length(B_ScalarValues) %Beta Value Changes For Colony 1
                 end
 
                 tt=0;
-
+                t = t+1;
                 
             end
 
